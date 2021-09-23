@@ -53,19 +53,22 @@
 
 @media (max-width: 550px) {
     .singlecontent{
-        width: 45%;
+        width: 85%;
+    }
+    .singlecontent__moviedetails{
+        
     }
     .singlecontentmovie{
         width: 45%;
     }    
     .singlecontent__moviedetails .singlecontent__heart{
         top: 10%;
-        -ms-transform: translateY(-25%);
-        transform: translateY(-30%) translateX(5%);
+        -ms-transform: translateY(-15%);
+        transform: translateY(-15%) translateX(25%);
     }
     .singlecontent__moviedetails:hover .singlecontent__heart{
         visibility: visible;   
-        transform: rotate(5deg) translateY(-30%) translateX(25%);
+        transform: rotate(5deg) translateY(15%) translateX(25%);
     }
     
 }
