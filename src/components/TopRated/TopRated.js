@@ -54,7 +54,7 @@ const TopRated = () => {
    
     return (
         <>
-        <span className="trending__pageTitle">Top Rated</span> 
+        <span className="toprated__pageTitle">Top Rated</span> 
         <AliceCarousel
         mouseTracking
         infinite

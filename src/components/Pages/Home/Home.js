@@ -1,4 +1,4 @@
-import './Trending.css'
+import './Home.css'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import {Spring} from 'react-spring'
@@ -11,6 +11,7 @@ import TopRated from '../../TopRated/TopRated';
 
 
 import {useSelector} from 'react-redux'
+import Callout from '../../Callout/Callout';
 
 const Trending = () => {
     //supposed to be state.[name-of-state] -- but not working.
@@ -45,19 +46,20 @@ const Trending = () => {
    
     return (              
         
-        <div className="trending">
+        <div className="home">
         {
             loading ? <CommonLoading /> : <div>
             <div>
+            <Callout/>
             <TopRated/>
-            <span className="trending__pageTitle">Trending Movies</span> 
+            <span className="home__pageTitle">Trending Movies</span> 
             <Spring
                 from={{opacity: 0, marginTop: -500}}
                 to={{opacity: 1, marginTop: 0}}
             >
             {props => (
                 <div style={props}>
-                <div className="trending__contents">
+                <div className="home__contents">
                     {
                         contents && contents.map((content) => (
                             <SingleContent isFavorite={findId(content.id)} movie={content} movieid={content.id} key={content.id} />

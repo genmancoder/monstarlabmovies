@@ -3,11 +3,12 @@ import "./MovieDetails.css";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
+
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-
+import Slide from "@material-ui/core/Slide";
 import axios from "axios";
 
 import Carousel from "../Carousel/Carousel";
@@ -31,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "60%",
     height: "50%",
-    backgroundColor: "#0d1117",
-    border: "0px solid #30363d",    
+    backgroundColor: "#2f3542",
+    border: "1px solid #57606f",    
     color: "white",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(1, 1, 3),
@@ -102,7 +103,7 @@ export default function TransitionsModal({ children, media_type, id }) {
           timeout: 500,
         }}
       >
-        <Fade in={open}>
+        <Slide  in={open} direction="up">
           {content && (
             <div className={classes.paper}>
               <div className="ContentModal">
@@ -159,7 +160,7 @@ export default function TransitionsModal({ children, media_type, id }) {
               </div>
             </div>
           )}
-        </Fade>
+        </Slide >
       </Modal>
     </>
   );

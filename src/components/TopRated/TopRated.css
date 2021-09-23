@@ -3,7 +3,7 @@
     display: flex;
     justify-content: flex-start;
     font-family: "Montserrat", sans-serif;
-    font-size: 2vw;
+    font-size: 1.6vw;
     padding: 4px;
     border-radius: 50px;
     margin: 13px;
@@ -14,7 +14,7 @@
 @media (max-width: 700px) {
     .toprated__pageTitle{
         padding-top: 10px;
-        font-size: 5vw;
+        font-size: 3vw;
     }
   }
 

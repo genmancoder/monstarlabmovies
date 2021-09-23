@@ -1,3 +1,9 @@
+.search{
+  /* margin-top: 200px; */
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+
 .search__pageTitle{
     text-transform: uppercase;
     display: flex;
@@ -7,9 +13,6 @@
     padding: 4px;
     border-radius: 50px;
     color: white;
-}
-.search{
-  margin-bottom: 20px;
 }
 
 @media (max-width: 700px) {

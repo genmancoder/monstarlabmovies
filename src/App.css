@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 
 .app {
   min-height: 100vh;
   background-color: rgb(13 17 23);
   color: white;
-  padding-top: 130px;
-  padding-bottom: 70px;
+  padding-top: 45px;
+  padding-bottom: 95px;
 }
 
 @media (max-width: 700px) {

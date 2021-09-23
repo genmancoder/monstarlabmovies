@@ -5,7 +5,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import MainNavigation from './components/MainNavigation';
 
-import Trending from './components/Pages/Trending/Trending';
+import Home from './components/Pages/Home/Home';
 import Search from './components/Pages/Search/Search';
 import Favorite from './components/Pages/Favorite/Favorite';
 
@@ -17,7 +17,7 @@ function App() {
     <div className="app">
       <Container>
           <Switch>
-            <Route path="/" component={Trending} exact/>            
+            <Route path="/" component={Home} exact/>            
             <Route path="/search" component={Search} />
             <Route path="/favorite" component={Favorite} />
           </Switch>

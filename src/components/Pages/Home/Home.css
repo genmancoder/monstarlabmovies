@@ -1,9 +1,9 @@
-.trending__pageTitle{
+.home__pageTitle{
     text-transform: uppercase;
     display: flex;
     justify-content: flex-start;
     font-family: "Montserrat", sans-serif;
-    font-size: 2vw;
+    font-size: 1.6vw;
     padding: 4px;
     border-radius: 50px;
     margin: 13px;
@@ -12,13 +12,13 @@
 
 
 @media (max-width: 700px) {
-    .trending__pageTitle{
+    .home__pageTitle{
         padding-top: 10px;
         font-size: 5vw;
     }
   }
 
-.trending__contents{
+.home__contents{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
