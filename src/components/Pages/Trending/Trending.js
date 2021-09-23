@@ -1,3 +1,4 @@
+import './Trending.css'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import {Spring} from 'react-spring'
@@ -7,19 +8,19 @@ import CustomPagination from '../../Pagination/CustomPagination';
 import SingleContent from '../../SingleContent/SingleContent';
 import TopRated from '../../TopRated/TopRated';
 
-import './Trending.css'
+
 
 import {useSelector} from 'react-redux'
 
 const Trending = () => {
-
+    //supposed to be state.[name-of-state] -- but not working.
     const favorites = useSelector((state) => state.favoriteReducer)
     const [page, setPage] = useState(1);    
     const [contents, setContents] = useState([]);
     // Adding a loading screen
     const [loading, setLoading] = useState(true);
 
-
+    // Getting all the trending movies.
     const fetchTrending = async () => {
         const {data} = await axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`);
 
@@ -33,10 +34,9 @@ const Trending = () => {
         fetchTrending();
     },[page])
 
-    let findId = (id) => {
-        
-        const index = favorites.findIndex((favorite) => favorite.id === id);
-       
+    //function to check if movie id exist in the `favorites` state
+    let findId = (id) => {        
+        const index = favorites.findIndex((favorite) => favorite.id === id);       
         if (index < 0)
             return false
         else    
