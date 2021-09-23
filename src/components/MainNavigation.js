@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import { useHistory } from 'react-router';
+import {useSelector} from 'react-redux'
 
 import WhatshotIcon from '@material-ui/icons/Whatshot';
-import MovieIcon from '@material-ui/icons/Movie';
-import TvIcon from '@material-ui/icons/Tv';
+import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 const useStyles = makeStyles({
   root: {
@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     position: "fixed",
     bottom: 0,
     backgroundColor: "#161b22",
-    zIndex:100
+    zIndex:999
   },
 });
 
@@ -23,12 +23,16 @@ export default function MainNavigation() {
   const [value, setValue] = React.useState(0);
   const history = useHistory();
 
+  const favorites = useSelector((state) => state.favoriteReducer)
+
   useEffect(() => {
-    if(value === 0) history.push('/')      
-    else if (value === 1) history.push('/movies')
-    else if (value === 2) history.push('/series')
-    else if (value === 3) history.push('/favorite')
-  }, [value,history])
+    if(value === 0) {history.push('/')}      
+    else if (value === 1) {history.push('/search') }   
+    else if (value === 2) {
+      window.scroll(0,0)
+      history.push('/favorite')
+    }
+  }, [value,history,favorites])
 
   return (
     <BottomNavigation
@@ -46,17 +50,17 @@ export default function MainNavigation() {
       />
       <BottomNavigationAction 
       style={{color: "white"}}
-      label="Movies" 
-      icon={<MovieIcon />}         
+      label="Search" 
+      icon={<SearchIcon />}         
       />
-      <BottomNavigationAction 
+      {/* <BottomNavigationAction 
       style={{color: "white"}}
       label="TV Series" 
       icon={<TvIcon />}         
-      />
+      /> */}
       <BottomNavigationAction 
       style={{color: "white"}}
-      label="Favorite" 
+      label={`Favorite (${favorites.length})`} 
       icon={<FavoriteIcon />}         
       />
     </BottomNavigation>

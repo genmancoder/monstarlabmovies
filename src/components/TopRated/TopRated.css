@@ -1,4 +1,4 @@
-.trending__pageTitle{
+.toprated__pageTitle{
     text-transform: uppercase;
     display: flex;
     justify-content: flex-start;
@@ -12,14 +12,28 @@
 
 
 @media (max-width: 700px) {
-    .trending__pageTitle{
+    .toprated__pageTitle{
         padding-top: 10px;
         font-size: 5vw;
     }
   }
 
-.trending__contents{
+.toprated__contents{
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
+}
+
+.carouselItem:hover{
+    transition: all .4s ease-in-out; 
+    transform: scale(1.3);
+    z-index: 990;
+}
+
+.carouselItem:hover .carouselItem__img{    
+    z-index: 999;
+}
+
+.alice-carousel__stage-item{
+    margin-right: 20px;
 }

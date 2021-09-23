@@ -1,0 +1,114 @@
+.singlecontentmovie{
+    /* border: 1px solid #ccc; */
+    /* 1EA28E */
+    margin-right: 10px;
+}
+.singlecontent__moviedetails{
+   position: relative;
+}
+.singlecontent{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 5px;
+  margin: 5px 0;
+  /* background-color: #282c34; */
+  /* border-radius: 10px; */
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  /* float: left; */
+  z-index: 66;
+}
+.singlecontent__badge{
+    z-index: 101;
+}
+.singlecontent__moviedetails .singlecontent__heart{
+    /* visibility: hidden; */
+    
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-60%) translateX(50%);
+    
+    
+}
+.singlecontent__heart{     
+    transition: all .3s ease-in-out; 
+    visibility: hidden;  
+    margin: 0 auto;    
+    z-index: 998;   
+    
+    /* transform: translateY(200%); */
+}
+
+
+
+.singlecontent__moviedetails:hover .singlecontent__heart{
+    visibility: visible;   
+    transform: rotate(10deg) translateY(-60%) translateX(50%);
+}
+
+
+
+@media (max-width: 550px) {
+    .singlecontent{
+        width: 45%;
+    }
+    .singlecontentmovie{
+        width: 45%;
+    }    
+    .singlecontent__moviedetails .singlecontent__heart{
+        top: 10%;
+        -ms-transform: translateY(-25%);
+        transform: translateY(-30%) translateX(5%);
+    }
+    .singlecontent__moviedetails:hover .singlecontent__heart{
+        visibility: visible;   
+        transform: rotate(5deg) translateY(-30%) translateX(25%);
+    }
+    
+}
+
+.singlecontent__poster{
+    /* border-radius: 10px; */
+    z-index: 10;
+    transition: all .3s ease-in-out; 
+}
+
+.singlecontentmovie:hover{
+    transition: all .3s ease-in-out; 
+    z-index: 998;
+    transform: scale(1.1);
+}
+
+
+
+.singlecontent__title{
+    width: 100%;
+    text-align: start;
+    font-size: 17px;
+    padding: 8px 0;
+}
+
+.singlecontent__subtitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3px;
+    padding: 0 2px;    
+}
+
+.singlecontent__details{
+    visibility: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+}
+
+.singlecontent:hover .singlecontent__details{    
+    transition: all .3s ease-in-out; 
+    transform: scale(1.2);
+    visibility: visible;
+    z-index: 99;
+}

@@ -6,8 +6,7 @@ import Header from './components/Header/Header';
 import MainNavigation from './components/MainNavigation';
 
 import Trending from './components/Pages/Trending/Trending';
-import Movies from './components/Pages/Movies/Movies';
-import Series from './components/Pages/Series/Series';
+import Search from './components/Pages/Search/Search';
 import Favorite from './components/Pages/Favorite/Favorite';
 
 
@@ -18,9 +17,8 @@ function App() {
     <div className="app">
       <Container>
           <Switch>
-            <Route path="/" component={Trending} exact/>
-            <Route path="/movies" component={Movies} />
-            <Route path="/series" component={Series} />
+            <Route path="/" component={Trending} exact/>            
+            <Route path="/search" component={Search} />
             <Route path="/favorite" component={Favorite} />
           </Switch>
       </Container>

@@ -1,0 +1,47 @@
+.search__pageTitle{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2vw;
+    padding: 4px;
+    border-radius: 50px;
+    color: white;
+}
+.search{
+  margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .search__pageTitle{
+        padding-top: 10px;        
+        font-size: 5vw;
+    }
+
+    .search__contentsImagePlaceholder > img{
+      width: 200px !important;
+    }
+  }
+
+  .search {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  .search__contents{
+    padding-top: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.search__contentsImagePlaceholder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.search__contentsImagePlaceholder > img{
+  width: 400px;
+}
