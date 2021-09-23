@@ -22,20 +22,14 @@ export const favoriteSlice = createSlice({
             // const filtered = index.filter((favorite) => favorite.id !== action.payload.movieid)
             // var newArray = state.filter(value => Object.keys(value).length !== 0);
             // const index = newArray.findIndex((favorite) => favorite.id == action.payload.movieid);
-            if(index > -1){
-                // newArray.splice(index,1)
-                // state = newArray
+            if(index > -1){                
                 state.splice(index,1)
             }
-
+            // removing empty object in the favorite state. 
             const findEmptyindex = state.findIndex((favorite) => Object.keys(favorite).length === 0);
-            if(findEmptyindex > -1){
-                // newArray.splice(index,1)
-                // state = newArray
+            if(findEmptyindex > -1){                              
                 state.splice(findEmptyindex,1)
             }
-            // Object.assign(state.favorites,filtered);
-            // state.favorites = filtered
         }
     }
 })

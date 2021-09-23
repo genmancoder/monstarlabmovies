@@ -1,12 +1,10 @@
-import {
-    Button,
+import {    
     createTheme,    
     TextField,
     ThemeProvider,
   } from "@material-ui/core";
   import "./Search.css";
-  
-  import SearchIcon from "@material-ui/icons/Search";
+  // import SearchIcon from "@material-ui/icons/Search";
   import { useEffect, useState } from "react";
   import {useSelector} from 'react-redux'
   import axios from "axios";
@@ -46,11 +44,9 @@ import {
         // console.error(error);
       }
     };
-
-    let findId = (id) => {
-        
-      const index = favorites.findIndex((favorite) => favorite.id === id);
-     
+    //finding the movie id if it exist in the favorites array.
+    let findId = (id) => {        
+      const index = favorites.findIndex((favorite) => favorite.id === id);     
       if (index < 0)
           return false
       else    
@@ -60,6 +56,7 @@ import {
     const handleSearch = (e) => {      
       let query = e.target.value
       if (query.length === 0){
+        //to-do = reset the results
         setSearchText('')
       }else{
         setSearchText(query)
@@ -94,9 +91,7 @@ import {
           </div>
        
         </ThemeProvider>
-        <div className="search__contents">
-          
-          
+        <div className="search__contents">                    
           {contents &&
             contents.map((content) => (
               <SingleContent isFavorite={findId(content.id)} movie={content} movieid={content.id} key={content.id} 

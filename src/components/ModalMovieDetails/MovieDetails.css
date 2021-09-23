@@ -63,6 +63,11 @@
   border-color: #30363d;
 }
 
+.ContentModal__Table{
+  width: 30%;
+  margin: 10px;
+}
+
 .ContentModal__description::-webkit-scrollbar {
   display: none;
 }

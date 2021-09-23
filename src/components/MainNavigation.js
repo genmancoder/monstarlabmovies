@@ -8,6 +8,7 @@ import {useSelector} from 'react-redux'
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from '@material-ui/icons/Favorite';
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -52,12 +53,7 @@ export default function MainNavigation() {
       style={{color: "white"}}
       label="Search" 
       icon={<SearchIcon />}         
-      />
-      {/* <BottomNavigationAction 
-      style={{color: "white"}}
-      label="TV Series" 
-      icon={<TvIcon />}         
-      /> */}
+      />  
       <BottomNavigationAction 
       style={{color: "white"}}
       label={`Favorite (${favorites.length})`} 

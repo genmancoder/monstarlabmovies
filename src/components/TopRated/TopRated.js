@@ -15,7 +15,6 @@ const TopRated = () => {
     // Adding a loading screen
     // const [loading, setLoading] = useState(true);
 
-
     const items = contents.map((movie) => (
         <div className="carouselItem">
          <img             
@@ -47,7 +46,7 @@ const TopRated = () => {
         // setLoading(false)
     }
     
-
+    //no dependency
     useEffect(() => {
         fetchTopRated();
     },[])

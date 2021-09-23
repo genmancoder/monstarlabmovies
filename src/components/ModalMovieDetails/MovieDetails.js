@@ -146,7 +146,23 @@ export default function TransitionsModal({ children, media_type, id }) {
                   <div>
                     <Carousel id={id} media_type={media_type} />
                   </div>
-
+                  <div>
+                    <table className="ContentModal__Table">
+                      <tr>
+                        <td>Runtime: </td>
+                        <td>{ content.tagline && content.runtime} mins</td>
+                      </tr>
+                      <tr>
+                        <td>Original Language: </td>
+                        <td>{content.original_language && content.original_language}</td>
+                      </tr>
+                      <tr>
+                        <td>Budget: </td>
+                        <td>{content.budget && content.budget}</td>
+                      </tr>
+                    </table>
+                    
+                  </div>
                   <Button
                     variant="contained"
                     startIcon={<YouTubeIcon />}
