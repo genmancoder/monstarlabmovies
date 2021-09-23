@@ -82,7 +82,7 @@ const Favorite = () => {
                         <p className="favorite__contentsTextPlaceholder">
                         <Typewriter
                         options={{
-                            strings: ['It is kind of lonely here.', 'Please add your favorite movies...'],
+                            strings: ['Seems lonely around here.', 'Please add your favorite movies...'],
                             autoStart: true,
                             loop: true,
                         }}
