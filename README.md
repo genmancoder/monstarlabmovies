@@ -1,3 +1,17 @@
+
+![alt text](https://github.com/genmancoder/monstarlabmovies/blob/master/src/images/monstarlab.png)
+
+# Monstarlab Movies
+
+Browse your favorite movies. You can add to your favorite section for ease of access.
+
+## Features
+- [To follow]
+
+## Features to be implemented soon:
+- [To follow]
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
