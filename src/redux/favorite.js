@@ -8,7 +8,7 @@ export const favoriteSlice = createSlice({
 ,
     reducers: {
         savefavorite: (state,action) => {
-
+            //check for the id, if added already
             let index = state.findIndex((favorite) => favorite.id === action.payload.movieid)
             if (index < 0){
                 const newArray = {                                                
